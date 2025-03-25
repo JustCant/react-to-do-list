@@ -1,0 +1,6 @@
+.list-item {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}

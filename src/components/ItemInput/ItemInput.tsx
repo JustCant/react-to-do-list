@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import './ItemInput.css';
 
 interface ItemInputProps {
     onItemAdded: (item: string) => void;
