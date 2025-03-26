@@ -1,3 +1,4 @@
+import TrashIcon from '../../common/TrashIcon/TrashIcon';
 import './Item.css';
 
 interface ItemProps {
@@ -13,7 +14,10 @@ const Item = ({ item }: ItemProps) => {
         <>
             <li className="list-group-item list-item">
                 <span>{item.index + 1}. { item.name }</span>
-                <button type="button" className="btn btn-danger" onClick={() => item.onBtnClick(item.index)}>Delete</button>
+                <i className="bi-alarm"></i>
+                <button type="button" className="btn btn-outline-danger" onClick={() => item.onBtnClick(item.index)}>
+                    <TrashIcon/>
+                </button>
             </li>
         </>
     )

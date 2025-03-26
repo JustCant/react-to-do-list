@@ -7,9 +7,13 @@ interface ItemInputProps {
 
 function ItemInput({ onItemAdded }: ItemInputProps) {
     const [inputValue, setInputValue] = useState('');
+    const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setInputValue((event.target as HTMLInputElement).value);
+        const value = (event.target as HTMLInputElement).value;
+        
+        setInputValue(value);
+        setIsBtnDisabled(value.trim() === '');
     };
 
     const handleClick = () => {
@@ -31,6 +35,7 @@ function ItemInput({ onItemAdded }: ItemInputProps) {
                     type="button" 
                     className="btn btn-primary item-input-btn" 
                     onClick={handleClick}
+                    disabled={isBtnDisabled}
                 >
                     Add Item
                 </button>

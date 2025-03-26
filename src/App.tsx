@@ -40,6 +40,7 @@ function App() {
       <h1>To-do List</h1>
       <ItemInput onItemAdded={ handleItemAdded }/>
       <ItemList items={ listItems }/>
+      { !listItems.length && <div>Nothing to do!</div> }
     </div>
   )
 }
