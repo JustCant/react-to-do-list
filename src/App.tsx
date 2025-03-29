@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>To-do List</h1>
+      <h1>To-do List testing changes!</h1>
       <ItemInput onItemAdded={ handleItemAdded }/>
       <ItemList items={ listItems }/>
       { !listItems.length && <div>Nothing to do!</div> }
